@@ -99,8 +99,14 @@ github.com/urbanminded/mynewt-newtmgr v0.0.2 h1:bV+9y/CbL8ZT9GwnyjKpeOcQKAvO8hvd
 github.com/urbanminded/mynewt-newtmgr v0.0.2/go.mod h1:Gk4DYfu9xXPS0GMvEJphcmWUVojXBxqaYYoAb1bpFVE=
 github.com/urbanminded/mynewt-newtmgr v0.0.3 h1:3waXQ376+aInIcjPHPylcbveiKhydTi6v3NO85S4XPg=
 github.com/urbanminded/mynewt-newtmgr v0.0.3/go.mod h1:Gk4DYfu9xXPS0GMvEJphcmWUVojXBxqaYYoAb1bpFVE=
+github.com/urbanminded/mynewt-newtmgr v0.0.4 h1:LaCtDutFq3eJZHbqbz7ciCsT5iE/VkTxF9S4NcI5/JM=
+github.com/urbanminded/mynewt-newtmgr v0.0.4/go.mod h1:Gk4DYfu9xXPS0GMvEJphcmWUVojXBxqaYYoAb1bpFVE=
+github.com/urbanminded/mynewt-newtmgr v0.0.5 h1:+xnr5F5p2EJ319O5eMs2CdXh6ZiQGMW5dQdnSWzqo6Q=
+github.com/urbanminded/mynewt-newtmgr v0.0.5/go.mod h1:Gk4DYfu9xXPS0GMvEJphcmWUVojXBxqaYYoAb1bpFVE=
 github.com/urbanminded/serial v0.0.2 h1:dI1ZgWzOyAGm85/bqbE+S1bIZw84JlqOeBQygIatJZc=
 github.com/urbanminded/serial v0.0.2/go.mod h1:uEVcignyYYElZBrvceDG1WWWwkf3Xuv+H6ZCkhMmDqo=
+github.com/urbanminded/serial v0.0.3 h1:BWflh6hAp60mYxx+pEYvL7Y5F9iXokiGqSR1FRoSs4Q=
+github.com/urbanminded/serial v0.0.3/go.mod h1:ZdpDTr1yQzQjOKeFtnn+v5sLb5jW7uwZQBszOS07lv8=
 github.com/urfave/cli v1.22.2/go.mod h1:Gos4lmkARVdJ6EkW0WaNv/tZAAMe9V7XWyB60NtXRu0=
 github.com/xordataexchange/crypt v0.0.3-0.20170626215501-b2862e3d0a77/go.mod h1:aYKd//L2LvnjZzWKhF00oedf4jCCReLcmhLdhm1A27Q=
 go.starlark.net v0.0.0-20190919145610-979af19b165c/go.mod h1:c1/X6cHgvdXj6pUlmWKMkuqRnW4K8x2vwt6JAaaircg=
@@ -121,6 +127,8 @@ golang.org/x/sys v0.0.0-20200223170610-d5e6a3e2c0ae h1:/WDfKMnPU+m5M4xB+6x4kaepx
 golang.org/x/sys v0.0.0-20200223170610-d5e6a3e2c0ae/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
 golang.org/x/sys v0.0.0-20220704084225-05e143d24a9e h1:CsOuNlbOuf0mzxJIefr6Q4uAUetRUwZE4qt7VfzP+xo=
 golang.org/x/sys v0.0.0-20220704084225-05e143d24a9e/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
+golang.org/x/sys v0.0.0-20220825204002-c680a09ffe64 h1:UiNENfZ8gDvpiWw7IpOMQ27spWmThO1RwwdQVbJahJM=
+golang.org/x/sys v0.0.0-20220825204002-c680a09ffe64/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
 golang.org/x/text v0.3.0/go.mod h1:NqM8EUOU14njkJ3fqMW+pc6Ldnwhi/IjpwHt7yyuwOQ=
 gopkg.in/VividCortex/ewma.v1 v1.1.1/go.mod h1:TekXuFipeiHWiAlO1+wSS23vTcyFau5u3rxXUSXj710=
 gopkg.in/abiosoft/ishell.v2 v2.0.0 h1:/J5yh3nWYSSGFjALcitTI9CLE0Tu27vBYHX0srotqOc=
