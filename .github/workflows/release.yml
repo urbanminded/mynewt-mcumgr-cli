@@ -35,7 +35,7 @@ jobs:
       - name: Build ${{ matrix.os }}_${{ matrix.arch }}
         run: |
           mkdir -p build
-          go build -o build/mcumgr_${GOOS}_${GOARCH}_${RELEASE_VERSION}${SUFFIX}
+          go build -o build/mcumgr_${GOOS}_${GOARCH}_${RELEASE_VERSION}${SUFFIX} github.com/apache/mynewt-mcumgr-cli/mcumgr
         env:
           GOOS: ${{ matrix.os }}
           GOARCH: ${{ matrix.arch }}
