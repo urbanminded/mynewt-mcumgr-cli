@@ -66,6 +66,9 @@ jobs:
           retention-days: 1
   release:
     runs-on: ubuntu-latest
+    needs:
+      - build_darwin
+      - build
     steps:
       - name: Set env
         run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
