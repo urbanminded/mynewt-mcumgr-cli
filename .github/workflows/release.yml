@@ -1,0 +1,64 @@
+name: release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - os: windows
+            arch: 386
+            suffix: .exe
+          - os: windows
+            arch: amd64
+            suffix: .exe
+          - os: darwin
+            arch: amd64
+            suffix: ""
+          - os: linux
+            arch: amd64
+            suffix: ""
+    steps:
+      - name: Set env
+        run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+      - name: Set up Go
+        uses: actions/setup-go@v3
+        with:
+          go-version: 1.18
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Build ${{ matrix.os }}_${{ matrix.arch }}
+        run: |
+          mkdir -p build
+          go build -o build/mcumgr_${GOOS}_${GOARCH}_${RELEASE_VERSION}${SUFFIX}
+        env:
+          GOOS: ${{ matrix.os }}
+          GOARCH: ${{ matrix.arch }}
+          SUFFIX: ${{ matrix.suffix }}
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ matrix.os }}_${{ matrix.arch }}
+          path: build
+          retention-days: 1
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set env
+        run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+      - name: Download all workflow run artifacts
+        uses: actions/download-artifact@v3
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          fail_on_unmatched_files: true
+          files: |
+            windows_386/*
+            windows_amd64/*
+            darwin_amd64/*
+            linux_amd64/*
